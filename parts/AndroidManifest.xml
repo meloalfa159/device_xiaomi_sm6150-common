@@ -135,6 +135,11 @@
                        android:resource="@string/haptic_summary" />
         </activity>
 
+        <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
+        </service>
+
     </application>
 </manifest>
 
