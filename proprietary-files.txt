@@ -418,45 +418,49 @@ vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 -vendor/lib/librice.so
 -vendor/lib/libsmwrapper.so
 
-# Media
+# Media - Codec2
 -vendor/bin/hw/vendor.qti.media.c2@1.0-service
--vendor/bin/vppservice
-vendor/etc/configstore/vpp.configstore.xml
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/init/vppservice.rc
 vendor/etc/seccomp_policy/codec2.vendor.base.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext.policy
--vendor/lib/libMpeg4SwEncoder.so
--vendor/lib/libOmxAacDec.so
--vendor/lib/libOmxAlacDec.so
--vendor/lib/libOmxAlacDecSw.so
--vendor/lib/libOmxAmrDec.so
--vendor/lib/libOmxAmrwbplusDec.so
--vendor/lib/libOmxApeDec.so
--vendor/lib/libOmxApeDecSw.so
--vendor/lib/libOmxDsdDec.so
--vendor/lib/libOmxEvrcDec.so
--vendor/lib/libOmxQcelp13Dec.so
--vendor/lib/libOmxSwVdec.so
--vendor/lib/libOmxSwVencMpeg4.so
--vendor/lib/libOmxVpp.so
--vendor/lib/libOmxWmaDec.so
--vendor/lib/libdsd2pcm.so
--vendor/lib/libmmosal.so;MODULE=libmmosal_vendor
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 -vendor/lib/libqcodec2.so
--vendor/lib/libswvdec.so
--vendor/lib/libvppclient.so
--vendor/lib/libvpphvx.so
--vendor/lib/libvpplibrary.so
--vendor/lib/vendor.qti.hardware.vpp@1.1.so
--vendor/lib/vendor.qti.hardware.vpp@1.2.so
--vendor/lib/vendor.qti.hardware.vpp@1.3.so
--vendor/lib64/libmmosal.so;MODULE=libmmosal_vendor
--vendor/lib64/libvpphvx.so
--vendor/lib64/libvpplibrary.so
--vendor/lib64/vendor.qti.hardware.vpp@1.1.so
--vendor/lib64/vendor.qti.hardware.vpp@1.2.so
--vendor/lib64/vendor.qti.hardware.vpp@1.3.so
+
+# Media (VPP) - from LA.UM.9.1.r1-12900-SMxxx0.0
+-vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
+-vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
+-vendor/lib64/libOmxVpp.so|23ae4cd2860131786e3b34ed380eb81fd849cf6c
+-vendor/lib64/libvppclient.so|d21711ec814b89213c4a014fc266606dfcd671b3
+-vendor/lib64/libvpphcp.so|8e20b26195b5ae79fa4b26faf7d47de27cac33f4
+-vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
+-vendor/lib64/libvpplibrary.so|cbb3a78b0b49a07944fb4f3b0daf83e8511ddc59
+-vendor/lib64/libvpptestutils.so|8891e9400cd6d79430b68b9a4996b3d62d281de4
+-vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e336f4a3d0a50ee985639db6a8a70ec9817144ee
+-vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7ae61a9c75d4a17f0aad5969ce1a27cd5b0552ae
+-vendor/lib64/vendor.qti.hardware.vpp@1.3.so|85a4e2ca843525db5c76486dbee4c5c7a672ee8d
+
+# Media (OMX) - from LA.UM.9.1.r1-12900-SMxxx0.0
+-vendor/lib/libOmxAacDec.so|c3d19eb5668973a6d7b64133d1b607a384167875
+-vendor/lib/libOmxAlacDec.so|17fbc925be0efdcfeb3473081016ba0203d6fea5
+-vendor/lib/libOmxAlacDecSw.so|be917abb87f621c8d721a03ed42016ae12bdbf8a
+-vendor/lib/libOmxAmrDec.so|fdbab94512df85478417112b793c4a4cee46e7ec
+-vendor/lib/libOmxAmrwbplusDec.so|0346a6f6da04bac6e7d6464e205e2b1d1ce881a1
+-vendor/lib/libOmxApeDec.so|8f49462382e71f3b51f3269824fa49111ceb2ea8
+-vendor/lib/libOmxApeDecSw.so|a0980f890bfa7a04c4af2e3d40e176e7d7bbf693
+-vendor/lib/libOmxDsdDec.so|93832f5a8e016a0cd419fca916f29a7987d4af9e
+-vendor/lib/libOmxEvrcDec.so|e26f066a89944ee36450c5325b45e5529de60882
+-vendor/lib/libOmxG711Dec.so|7e310d958e5a68caeacef44a48acf0be5497beb6
+-vendor/lib/libOmxQcelp13Dec.so|ec0650fee64998b47cfed806cda26f0eb8fd85a8
+-vendor/lib/libOmxSwVdec.so|490d51df165e9f59a3bdf09c1fb08e79b1857309
+-vendor/lib/libOmxSwVencMpeg4.so|d52be5900bb742bdf7202d580e788083153d8160
+-vendor/lib/libOmxWmaDec.so|09ea4d8b190fbfcc61698c46f46c97b0f45fcdfc
+-vendor/lib/libswvdec.so|443380c7092d69f47ff204549a7670a1573cd922
+
+# Media (Software) - from LA.UM.9.1.r1-12900-SMxxx0.0
+-vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def
+-vendor/lib/libApeSwDec.so|ce425ef9372ed6635e313422b3578f77b90ff526
+-vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
+-vendor/lib/libMpeg4SwEncoder.so|ed6478056d874c784dd649b172e7f0bb3188ba9f
+-vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 
 # Neural Networks
 -vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
