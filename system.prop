@@ -7,6 +7,13 @@ persist.vendor.cne.feature=1
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
+# Infinity-X specific
+ro.product.marketname=Xiaomi Mi11 Lite 4G
+ro.infinity.soc=Snapdragon 732G
+ro.infinity.battery=4250 mAh
+ro.infinity.display=1080 x 2400, 90 Hz
+ro.infinity.camera=64MP + 8MP + 5MP
+
 # LMKD
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
