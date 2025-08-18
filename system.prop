@@ -8,7 +8,6 @@ persist.vendor.cne.feature=1
 persist.sys.fuse.passthrough.enable=true
 
 # LMKD
-ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
 
 # Media
